@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Single Page Apps for GitHub Pages -->
+  <script type="text/javascript">
+    // Single Page Apps for GitHub Pages
+    // MIT License
+    // https://github.com/rafgraph/spa-github-pages
+    // This script checks to see if a redirect is present in the query string,
+    // converts it back into the correct url and adds it to the
+    // browser's history using window.history.replaceState(...),
+    // which won't cause the browser to attempt to load the new url.
+    // When the single page app is loaded further down in this file,
+    // the correct url will be waiting in the browser's history for
+    // the single page app to route accordingly.
+    (function (l) {
+      if (l.search[1] === '/') {
+        var decoded = l.search.slice(1).split('&').map(function (s) {
+          return s.replace(/~and~/g, '&')
+        }).join('?');
+        window.history.replaceState(null, null,
+          l.pathname.slice(0, -1) + decoded + l.hash
+        );
+      }
+    }(window.location))
+  </script>
+
+  <!-- <base href="$FLUTTER_BASE_HREF"> -->
+  <base href="/teqanat_website/">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Teqanat - Professional Software Services & Digital Solutions. Web development, mobile apps, UI/UX design, and digital transformation.">
+  <meta name="keywords" content="software, web development, mobile apps, digital services, teqanat">
+  <meta name="author" content="Teqanat">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://teqanat.com/">
+  <meta property="og:title" content="Teqanat - Professional Software Services">
+  <meta property="og:description"
+    content="Professional Software Services & Digital Solutions. Web development, mobile apps, UI/UX design, and digital transformation.">
+  <meta property="og:image" content="icons/Icon-512.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://teqanat.com/">
+  <meta property="twitter:title" content="Teqanat - Professional Software Services">
+  <meta property="twitter:description"
+    content="Professional Software Services & Digital Solutions. Web development, mobile apps, UI/UX design, and digital transformation.">
+  <meta property="twitter:image" content="icons/Icon-512.png">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Teqanat">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="icons/app_icon.png" />
+  <link rel="shortcut icon" type="image/png" href="icons/app_icon.png" />
+
+  <title>Teqanat - Professional Software Services</title>
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Preload critical resources -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <style>
+    /* Loading screen styles */
+    .loading-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    .loading-content {
+      text-align: center;
+    }
+
+    .loading-logo {
+      width: 180px;
+      height: 180px;
+      margin: 0 auto 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: pulse 2s infinite;
+    }
+
+    .loading-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .loading-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 12px;
+      letter-spacing: 3px;
+      color: #8B5CF6;
+    }
+
+    .loading-subtitle {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 16px;
+      color: #6B7280;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        opacity: 1;
+      }
+
+      50% {
+        transform: scale(1.05);
+        opacity: 0.9;
+      }
+
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    /* Hide loading when Flutter loads */
+    .flutter-loaded .loading-container {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Loading screen -->
+  <div class="loading-container" id="loading">
+    <div class="loading-content">
+      <div class="loading-logo">
+        <img src="icons/app_icon.png" alt="Teqanat Logo">
+      </div>
+      <div class="loading-text">TEQANAT</div>
+      <div class="loading-subtitle">Loading Professional Services...</div>
+    </div>
+  </div>
+
+  <script>
+    // Remove loading screen when Flutter loads
+    window.addEventListener('flutter-first-frame', function () {
+      document.body.classList.add('flutter-loaded');
+    });
+
+    // Fallback: remove loading screen after timeout
+    setTimeout(function () {
+      document.body.classList.add('flutter-loaded');
+    }, 5000);
+  </script>
+
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+
+</html>
